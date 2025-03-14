@@ -16,19 +16,36 @@ public class CheckGuest {
 
         boolean isGuest = false;
 
-        for (int i = 0; i < guests.length; i++) {
+        int i = 0;
+
+        // for (int i = 0; i < guests.length; i++) {
+        //     if (guestName.equalsIgnoreCase(guests[i])) {
+        //         System.out.println("Welcome to the party, " + guestName + "!");
+        //         isGuest = true;
+        //         break;
+        //     } 
+        // }
+
+        // if (isGuest == false) {
+        //     System.out.println("Sorry, you're not on the list. Please leave.");
+        // }
+
+        // System.out.println("Thank you for coming to the party!");
+
+
+        while (i < guests.length) {
             if (guestName.equalsIgnoreCase(guests[i])) {
                 System.out.println("Welcome to the party, " + guestName + "!");
                 isGuest = true;
                 break;
-            } 
-        }
+            } else {
+                i++;
+            }
+           
+        } 
 
-        if (isGuest == false) {
+        if (!isGuest) {
             System.out.println("Sorry, you're not on the list. Please leave.");
         }
-
-        System.out.println("Thank you for coming to the party!");
-
     }
 }
