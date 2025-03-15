@@ -47,5 +47,7 @@ public class CheckGuest {
         if (!isGuest) {
             System.out.println("Sorry, you're not on the list. Please leave.");
         }
+
+        input.close();
     }
 }
